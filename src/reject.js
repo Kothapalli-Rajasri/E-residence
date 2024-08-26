@@ -16,7 +16,7 @@ function Reject2() {
   return (
     <div>
       {/* Heading Section */}
-      <div style={{ backgroundColor: 'red', height: '13vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <div style={{ backgroundColor: '#FF6347', height: '13vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <h4 style={{ color: 'black' }}>Rejected Requests</h4>
       </div>
 
@@ -25,12 +25,12 @@ function Reject2() {
         Clear All
       </button>
 
-      {/* Display Rejected Requests in a Table */}
+      {/*  Table */}
       {rejectedRequests.length > 0 && (
         <div style={{ padding: '20px' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse' }}>
             <thead>
-              <tr style={{ backgroundColor: 'red', color: 'white' }}>
+              <tr style={{ backgroundColor: '#FF6347', color: 'white' }}>
                 <th style={{ padding: '10px', border: '1px solid #ddd' }}>Application Number</th>
                 <th style={{ padding: '10px', border: '1px solid #ddd' }}>Hostel Name</th>
                 <th style={{ padding: '10px', border: '1px solid #ddd' }}>Room Number</th>

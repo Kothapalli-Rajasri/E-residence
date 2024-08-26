@@ -22,11 +22,11 @@ function Accept2() {
       </div>
 
       {/* Clear Button */}
-      <button onClick={clearAcceptedRequests} style={{ margin: '20px', padding: '10px', backgroundColor: 'red', color: 'white', border: 'none', borderRadius: '4px' }}>
+      <button onClick={clearAcceptedRequests} style={{ margin: '20px', padding: '10px', backgroundColor: '#C3272B', color: 'white', border: 'none', borderRadius: '4px' }}>
         Clear All
       </button>
 
-      {/* Display Accepted Requests in a Table */}
+      {/* Table */}
       {acceptedRequests.length > 0 && (
         <div style={{ padding: '20px' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse' }}>

@@ -13,7 +13,7 @@ const Rooms = () => {
   return (
     <div style={{ background: 'linear-gradient(135deg, rgba(240, 0, 238, 0.3), rgba(0, 238, 255, 0.3))', minHeight: '100vh', padding: '20px' }}>
       <h1 style={{ color: '#4a148c', fontFamily: 'Lobster, cursive', textAlign: 'center' }}>
-        Beds in the Hostel: {hostelName}
+         Hostel: {hostelName}
       </h1>
       <div style={{ backgroundColor: '#e9d6fe', padding: '20px', minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <div style={{ display: 'flex', gap: '20px', maxWidth: '1000px', width: '100%' }}>

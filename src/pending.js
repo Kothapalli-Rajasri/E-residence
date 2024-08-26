@@ -18,39 +18,39 @@ function Pending2() {
   );
 
   const handleAccept = (request) => {
-    // Add to acceptedRequests in localStorage
+    
     let acceptedRequests = JSON.parse(localStorage.getItem('acceptedRequests')) || [];
     acceptedRequests.push(request);
     localStorage.setItem('acceptedRequests', JSON.stringify(acceptedRequests));
 
-    // Remove from pending requests
+  
     setRequests(prevRequests => prevRequests.filter(r => r.applicationNumber !== request.applicationNumber));
 
-    // Show popup
+    
     alert('Request is accepted');
   };
 
   const handleReject = (request) => {
-    // Add to rejectedRequests in localStorage
+    
     let rejectedRequests = JSON.parse(localStorage.getItem('rejectedRequests')) || [];
     rejectedRequests.push(request);
     localStorage.setItem('rejectedRequests', JSON.stringify(rejectedRequests));
 
-    // Remove from pending requests
+   
     setRequests(prevRequests => prevRequests.filter(r => r.applicationNumber !== request.applicationNumber));
 
-    // Show popup
+    
     alert('Request is rejected');
   };
 
   return (
     <div>
-      {/* Heading Section */}
-      <div style={{ backgroundColor: 'blue', height: '13vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      
+      <div style={{ backgroundColor: '#5A9BD6', height: '13vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <h4 style={{ color: 'black' }}>Pending Requests</h4>
       </div>
 
-      {/* Search Bar Section */}
+      
       <div style={{ marginTop: '20px', textAlign: 'center' }}>
         <label htmlFor="student-search" style={{ marginRight: '10px', fontWeight: 'bold' }}>
           Search by Application Number:
@@ -65,10 +65,10 @@ function Pending2() {
         />
       </div>
 
-      {/* Table Section */}
+      
       <table style={{ width: '100%', marginTop: '20px', borderCollapse: 'collapse' }}>
         <thead>
-          <tr style={{ backgroundColor: 'blue', color: 'white' }}>
+          <tr style={{ backgroundColor: '#5A9BD6', color: 'white' }}>
             <th style={{ padding: '10px', border: '1px solid #ddd' }}>Application Number</th>
             <th style={{ padding: '10px', border: '1px solid #ddd' }}>Hostel Name</th>
             <th style={{ padding: '10px', border: '1px solid #ddd' }}>Room Number</th>
@@ -85,13 +85,13 @@ function Pending2() {
               <td style={{ padding: '10px', border: '1px solid #ddd' }}>{request.bedNumber}</td>
               <td style={{ padding: '10px', border: '1px solid #ddd', textAlign: 'center' }}>
                 <button 
-                  style={{ backgroundColor: 'green', color: 'white', padding: '5px 10px', border: 'none', borderRadius: '4px', marginRight: '5px' }}
+                  style={{backgroundColor: '#77dd77', color: 'white', padding: '5px 10px', border: 'none', borderRadius: '4px', marginRight: '5px' }}
                   onClick={() => handleAccept(request)}
                 >
                   Accept
                 </button>
                 <button 
-                  style={{ backgroundColor: 'red', color: 'white', padding: '5px 10px', border: 'none', borderRadius: '4px' }}
+                  style={{ backgroundColor: '#C3272B', color: 'white', padding: '5px 10px', border: 'none', borderRadius: '4px' }}
                   onClick={() => handleReject(request)}
                 >
                   Reject

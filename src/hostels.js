@@ -7,35 +7,35 @@ function Hostel() {
     const hostels = [
         {
             name: "Vaishnavi",
-            image: "https://example.com/sunrise.jpg"
+            image: "#"
         },
         {
             name: "Saradha",
-            image: "https://example.com/green-valley.jpg"
+            image: "#"
         },
         {
             name: "Sitha",
-            image: "https://example.com/lakeview.jpg"
+            image: "#"
         },
         {
             name: "Medha",
-            image: "https://example.com/city-lights.jpg"
+            image: "#"
         },
         {
             name: "Manasa",
-            image: "https://example.com/ocean-breeze.jpg"
+            image: "#"
         },
         {
             name: "Yamini",
-            image: "https://example.com/mountain-peak.jpg"
+            image: "#"
         },
         {
             name: "Rajeswari",
-            image: "https://example.com/river-side.jpg"
+            image: "#"
         },
         {
             name: "Rajyalakshmi",
-            image: "https://example.com/starry-night.jpg"
+            image: "#"
         }
     ];
 

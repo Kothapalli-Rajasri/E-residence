@@ -33,7 +33,7 @@ function Booking() {
         bed.id === selectedBed.id ? { ...bed, color: 'yellow' } : bed
       ));
 
-      setMessage(''); // Reset message after submission
+      setMessage(''); 
     } else {
       alert('Please select a bed before submitting');
     }
@@ -56,7 +56,7 @@ function Booking() {
     <div style={{ backgroundColor: '#e9d6fe', minHeight: '100vh', padding: '20px' }}>
       <div style={{ textAlign: 'center', marginTop: '20px' }}>
         <div style={{ marginBottom: '20px', fontSize: '24px', fontWeight: 'bold', color: '#333' }}>
-          Beds in the room number: {roomNumber} {/* Display the room number */}
+          Beds in the room number: {roomNumber} 
         </div>
         <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginBottom: '20px' }}>
           {beds.map(bed => (
