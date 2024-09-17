@@ -18,47 +18,39 @@ function Log({ title ,showRegister }) {
         const id = collegRef.current.value.trim();
         const password = passRef.current.value.trim();
         let hasError = false;
-    
+
         if (!id) {
             setIdError("ID is required.");
             hasError = true;
         } else {
             setIdError("");
         }
-    
+
         if (!password) {
             setPassError("Password is required.");
             hasError = true;
         } else {
             setPassError("");
         }
-    
+
         if (hasError) return;
-    
-        // Check if ID and password match the stored student details
-        const storedStudentId = localStorage.getItem("studentId");
-        const storedStudentPassword = localStorage.getItem("password");
-    
-        if (title === "Student Login") {
-            if (id === storedStudentId && password === storedStudentPassword) {
-                setMess("Correct");
-                localStorage.setItem("name", "Student");
+
+        if (id === password) {
+            setMess("Correct");
+            localStorage.setItem("name", title === "Student Login" ? "Student" : "Admin");
+            if (title === "Student Login") {
                 navigate("/hostel");
             } else {
-                setMess("Incorrect ID or Password");
+                setMess("Admin logged in successfully");
+                navigate("/home");
             }
-        } else if (id === password) {
-            setMess("Admin logged in successfully");
-            localStorage.setItem("name", "Admin");
-            navigate("/home");
         } else {
             setMess("Incorrect ID or Password");
         }
-    
+
         collegRef.current.value = '';
         passRef.current.value = '';
     };
-    
 
     const handleRegister = () => {
         navigate('/studentdetails');

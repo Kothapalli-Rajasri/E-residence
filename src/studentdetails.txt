@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 function StudentDetails() {
     const [formValues, setFormValues] = useState({
         studentId: "",
-        password :"",
         name: "",
         branch: "",
         phoneNumber: "",
@@ -41,14 +40,10 @@ function StudentDetails() {
         e.preventDefault();
         const errors = validate();
         if (Object.keys(errors).length === 0) {
-
-            localStorage.setItem('studentId', formValues.studentId);
-            localStorage.setItem('password', formValues.password);
             console.log("Form submitted:", formValues);
-            navigate('/');
+            navigate('/hostel');
             setFormValues({
                 studentId: "",
-                password: "",
                 name: "",
                 branch: "",
                 phoneNumber: "",
@@ -88,12 +83,6 @@ function StudentDetails() {
                             <input type="text" name="studentId" value={formValues.studentId} onChange={handleChange} className="form-control"
                                 style={{ borderRadius: '8px', padding: '10px', width: '100%', marginBottom: '10px' }} />
                             {formErrors.studentId && <span style={{ color: 'red' }}>{formErrors.studentId}</span>}
-                        </div>
-                        <div className="mb-3">
-                            <label style={{ fontWeight: 'bold', color: '#555' }}>Password</label>
-                            <input type="password" name="password" value={formValues.password} onChange={handleChange} className="form-control"
-                                style={{ borderRadius: '8px', padding: '10px', width: '100%', marginBottom: '10px' }} />
-                            {formErrors.password && <span style={{ color: 'red' }}>{formErrors.password}</span>}
                         </div>
                         <div className="mb-3">
                             <label style={{ fontWeight: 'bold', color: '#555' }}>Name</label>

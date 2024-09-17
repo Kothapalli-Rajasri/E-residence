@@ -27,7 +27,7 @@ function Pending2() {
     setRequests(prevRequests => prevRequests.filter(r => r.applicationNumber !== request.applicationNumber));
 
     
-    alert('Request is accepted');
+    // alert('Request is accepted');
   };
 
   const handleReject = (request) => {
